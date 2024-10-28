@@ -1,26 +1,4 @@
-const workData = [
-  {
-    title: "Software Engineer",
-    company: "Tech Corp",
-    duration: "2022/01/15 - 2023/06/30",
-    description:
-      "Worked as a software engineer focusing on web development, building full-stack applications using React and Node.js.",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Design Solutions",
-    duration: "2020/03/10 - 2021/12/15",
-    description:
-      "Led frontend development for several projects, implementing responsive designs with Tailwind CSS and optimizing performance.",
-  },
-  {
-    title: "Backend Developer",
-    company: "Data Systems",
-    duration: "2018/06/01 - 2020/02/28",
-    description:
-      "Developed and maintained REST APIs using Node.js and PostgreSQL, ensuring smooth data flows for a large-scale platform.",
-  },
-];
+import data from "../../../data/Portfolio/data";
 
 const Work = () => {
   return (
@@ -29,7 +7,7 @@ const Work = () => {
         My Work Experience
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {workData.map((work, index) => (
+        {data.Work.map((work, index) => (
           <div
             key={index}
             className="p-4 dark:bg-Primary_dark bg-white shadow-lg rounded-lg transform transition-transform hover:scale-105"

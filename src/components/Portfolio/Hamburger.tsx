@@ -3,6 +3,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Links from "./Links";
 import { Link as ScrollLink } from "react-scroll";
+import data from "../../../data/Portfolio/data";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-end w-full ">
+      <div className="flex flex-row justify-end w-full p-4">
         <button
           onClick={toggleMenu}
           className="fixed z-50 left-0 flex flex-col justify-center items-center w-10 h-10 group outline-none"
@@ -34,7 +35,7 @@ const HamburgerMenu = () => {
             className="w-8 h-1 dark:bg-white  bg-black rounded transition-all duration-300 ease-in-out"
           />
         </button>
-        <div className="flex flex-row gap-4 justify-center items-center ">
+        <div className="flex flex-row gap-4 justify-center items-center  ">
           <Links></Links>
         </div>
       </div>
@@ -72,34 +73,39 @@ function ContentOfSideBar({ onChildClick }: { onChildClick: any }) {
             Home
           </ScrollLink>
         </button>
-        <button
-          onClick={onChildClick}
-          className="transform hover:scale-125 transition-transform duration-100"
-        >
-          <ScrollLink
-            to="work"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
+        {data.Work.length > 0 && (
+          <button
             onClick={onChildClick}
+            className="transform hover:scale-125 transition-transform duration-100"
           >
-            Work
-          </ScrollLink>
-        </button>
-        <button
-          onClick={onChildClick}
-          className="transform hover:scale-125 transition-transform duration-100"
-        >
-          <ScrollLink
-            to="projects"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
+            <ScrollLink
+              to="work"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+              onClick={onChildClick}
+            >
+              Work
+            </ScrollLink>
+          </button>
+        )}
+        {data.projectData.length > 0 && (
+          <button
             onClick={onChildClick}
+            className="transform hover:scale-125 transition-transform duration-100"
           >
-            Projects{" "}
-          </ScrollLink>
-        </button>
+            <ScrollLink
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+              onClick={onChildClick}
+            >
+              Projects
+            </ScrollLink>
+          </button>
+        )}
+
         <button
           onClick={onChildClick}
           className="transform hover:scale-125 transition-transform duration-100"
@@ -111,7 +117,7 @@ function ContentOfSideBar({ onChildClick }: { onChildClick: any }) {
             className="cursor-pointer"
             onClick={onChildClick}
           >
-            About{" "}
+            About
           </ScrollLink>
         </button>
         <button

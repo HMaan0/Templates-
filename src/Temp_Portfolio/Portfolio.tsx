@@ -4,6 +4,7 @@ import HamburgerMenu from "@/components/Portfolio/Hamburger";
 import Hero from "@/components/Portfolio/Hero";
 import Projects from "@/components/Portfolio/Projects";
 import Work from "@/components/Portfolio/Work";
+import data from "../../data/Portfolio/data";
 
 const Portfolio = () => {
   return (
@@ -20,12 +21,17 @@ const Portfolio = () => {
             <div className="-z-50 -rotate-45 absolute left-1/2  transform -translate-x-1/2 w-1/2 h-96 bg-gradient-radial from-Theme_blue/50 to-transparent rounded-full blur-3xl"></div>
             <Hero></Hero>
           </section>
-          <section id="work" className="h-full  ">
-            <Work></Work>
-          </section>
-          <section id="projects" className="h-full ">
-            <Projects></Projects>
-          </section>
+          {data.Work.length > 0 && (
+            <section id="work" className="h-full  ">
+              <Work></Work>
+            </section>
+          )}
+          {data.projectData.length > 0 && (
+            <section id="projects" className="h-full ">
+              <Projects></Projects>
+            </section>
+          )}
+
           <section id="about" className="h-full ">
             <About></About>
           </section>
