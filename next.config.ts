@@ -11,6 +11,18 @@ const nextConfig: NextConfig = {
       {
         hostname: "encrypted-tbn0.gstatic.com",
       },
+      {
+        hostname: "static.wikia.nocookie.net",
+      },
+      {
+        hostname: "avatars.githubusercontent.com",
+      },
+      {
+        hostname: "cdn.simpleicons.org",
+      },
+      {
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };

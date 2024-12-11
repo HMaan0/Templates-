@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,11 +15,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        Primary_dark: "#212121",
-        Primary_light: "white",
-        //Theme_blue: "#00AEFF",
-        "theme-secondary": "#9e2e3b",
-        //make a condition render that if the theme-secondary is darker shared then make the text light
+        theme_bg_light: "#ffffff",
+        theme_bg_dark: "black",
+        primary_dark: "#212121",
+        primary_light: "white",
+        theme_secondary: "#9e2e3b",
+        theme_gradient: "#606060",
       },
     },
   },
