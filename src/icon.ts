@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   SiReact,
   SiNextdotjs,
@@ -94,7 +95,7 @@ import {
   SiCloudera,
   SiPowerbi,
 } from "react-icons/si";
-const icons: any = [
+const icons = [
   {
     component: "SiReact",
     color: "#61DAFB",

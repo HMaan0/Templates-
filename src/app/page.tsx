@@ -24,11 +24,13 @@ const home = () => {
         <div className="mt-20 w-10/12 sm:w-7/12 flex flex-col gap-40">
           <section id="home" className="h-full  ">
             <Hero></Hero>
-            <div className="mt-64">
-              <Card>
-                <GithubInfo></GithubInfo>
-              </Card>
-            </div>
+            {data.Github.github_username.length > 0 && (
+              <div className="mt-64">
+                <Card>
+                  <GithubInfo></GithubInfo>
+                </Card>
+              </div>
+            )}
           </section>
           <TechStack></TechStack>
           {data.Work.map((work) => work.title.length > 0).at(0) && (

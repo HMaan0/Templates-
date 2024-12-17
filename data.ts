@@ -1,17 +1,15 @@
 const data = {
   Hero: {
-    name: "Harsh Maan",
-    des: "Software Developer with a passion for clean code",
-    image:
-      "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/9/9d/Iron_Man_Infobox.jpg/revision/latest?cb=20240802142023",
-    words: ["Software", "Developer", "Engineer", "Physicist"],
+    name: "Name",
+    des: "Enter the text from right side such as:",
+    words: ["Bio", "About", "Work experience", "Projects"],
   },
   Github: {
-    github_username: "harsh-deepsingh",
+    github_username: "",
   },
   Work: [
     {
-      title: "",
+      title: "Enter work experience here",
       company: "",
       duration: "",
       description: "",
@@ -19,15 +17,15 @@ const data = {
   ],
   projectData: [
     {
-      title: "",
+      title: "Enter your projects here",
       description: "",
       liveLink: "",
       codeLink: "",
     },
   ],
   aboutData: {
-    description: "Passionate about technology.",
-    skills: ["docker", "java", "java"],
+    description: "Let's talk about your hobbies",
+    skills: ["Some", "Skills", "here"],
   },
   contact: {
     LinkedIn: "john-linkedin",

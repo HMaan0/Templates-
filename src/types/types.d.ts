@@ -1,4 +1,5 @@
-type repo = {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export type Repo = {
   html_url: Url;
   name:
     | string

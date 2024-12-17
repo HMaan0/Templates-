@@ -1,16 +1,16 @@
-import Image from "next/image";
+//import Image from "next/image"
 import data from "../../data";
 import TypeWriter from "../components/TypeWriter";
 
 const Hero = async () => {
-  let image = false;
-  if (data.Hero.image.length > 0) {
-    image = true;
-  }
+  const image = false;
+  // if (data.Hero.image.length > 0) {
+  //   image = true;
+  // }
   return (
     <>
       <div className="flex justify-center items-center">
-        {data.Hero.image.length > 0 && (
+        {/* {data.Hero.image.length > 0 && (
           <div className="flex gap-20 sm:gap-2 sm:flex-row flex-col mt-10 ">
             <div className="flex flex-col justify-center w-full sm:w-1/2 text-center md:text-start pl-14">
               <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ">
@@ -33,7 +33,7 @@ const Hero = async () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
         {!image && (
           <div className="mt-28 text-center flex flex-col justify-center w-full sm:w-1/2 ">
             <p className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold">
@@ -42,6 +42,7 @@ const Hero = async () => {
             <p className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl mt-10">
               {data.Hero.des}
             </p>
+            <TypeWriter words={data.Hero.words}></TypeWriter>
           </div>
         )}
       </div>

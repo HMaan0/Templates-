@@ -8,8 +8,13 @@ import data from "../../data";
 
 const GithubInfo = async () => {
   const username = data.Github.github_username;
-  const res = await fetch(`https://api.github.com/users/${username}`);
-  const githubInfo = await res.json();
+  let githubInfo;
+  try {
+    const res = await fetch(`https://api.github.com/users/${username}`);
+    githubInfo = await res.json();
+  } catch (error) {
+    return error;
+  }
 
   return (
     <div className="flex  gap-2 w-full  ">

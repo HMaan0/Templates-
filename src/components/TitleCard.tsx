@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Tilt } from "react-tilt";
 
-// Define a reusable fade-in function with framer-motion
 const fadeIn = (
   direction = "up",
   type = "spring",
@@ -29,11 +28,7 @@ const fadeIn = (
   };
 };
 
-const TitleCard = ({
-  title = "HELLO",
-  icon,
-  tiltOptions = { max: 35, scale: 1.05, speed: 500 },
-}) => {
+const TitleCard = ({ title = "HELLO" }) => {
   return (
     <Tilt
       options={{ max: 35, scale: 1.1, speed: 400, perspective: 1000 }}
@@ -59,18 +54,6 @@ const TitleCard = ({
             perspective: "1000px",
           }}
         >
-          {icon && (
-            <motion.img
-              src={icon}
-              alt="icon"
-              className="w-16 h-16 object-contain mb-4 transition-transform duration-500"
-              style={{
-                transform: "translateZ(50px)",
-                boxShadow: "0 8px 12px rgba(0, 0, 0, 0.4)",
-              }}
-              whileHover={{ scale: 1.2, rotateZ: 10, translateZ: 60 }}
-            />
-          )}
           <motion.h3
             className="text-white text-[20px] font-bold text-center"
             style={{

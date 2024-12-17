@@ -34,8 +34,6 @@ const Portfolio = () => {
             </section>
           )}
           {data.aboutData.description.length ||
-          data.aboutData.personalDetails.email ||
-          data.aboutData.personalDetails.location.length > 0 ||
           data.aboutData.skills.map((skill) => skill.length).at(0) ? (
             <section id="about" className="h-full ">
               <About></About>
