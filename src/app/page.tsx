@@ -27,6 +27,7 @@ const home = () => {
             {data.Github.github_username.length > 0 && (
               <div className="mt-64">
                 <Card>
+                  {/* @ts-expect-error Server Component */}
                   <GithubInfo></GithubInfo>
                 </Card>
               </div>
@@ -38,13 +39,6 @@ const home = () => {
               <Work></Work>
             </section>
           )}
-          {/* <TitleCard
-            title="3D Card"
-            icon="path/to/icon.png"
-            tiltOptions={{ max: 45, scale: 1.1, speed: 500 }}
-          /> */}
-
-          {/* <ThreeDCard></ThreeDCard> */}
           {data.projectData
             .map((projects) => projects.title.length > 0)
             .at(0) && (
@@ -53,8 +47,6 @@ const home = () => {
             </section>
           )}
           {data.aboutData.description.length ||
-          // data.aboutData.personalDetails.email ||
-          // data.aboutData.personalDetails.location.length > 0 ||
           data.aboutData.skills.map((skill) => skill.length).at(0) ? (
             <section id="about" className="h-full ">
               <About></About>
