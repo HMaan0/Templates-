@@ -26,7 +26,7 @@ const home = () => {
             <Hero></Hero>
             {data.Github.github_username.length > 0 && (
               <div className="mt-64">
-                <Card>
+                <Card key={0}>
                   {/* @ts-expect-error Server Component */}
                   <GithubInfo></GithubInfo>
                 </Card>
